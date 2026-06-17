@@ -1,0 +1,12 @@
+# 機器學習 — Python 套件需求 (Python 3.11)
+# 注意：notebook 於 pandas < 2.0 時期撰寫，在 pandas 2.1+/3.0 會因
+# fillna(method=)、DataFrame.append 等 API 變動而報錯，故釘住相容版本以重現原始結果。
+numpy==1.24.4
+pandas==1.5.3
+scipy==1.10.1
+scikit-learn==1.3.2
+xgboost==1.7.6
+shap==0.43.0
+statsmodels==0.14.1
+matplotlib==3.7.5
+openpyxl==3.1.2
