@@ -23,10 +23,9 @@ pip install pandas numpy scikit-learn xgboost shap statsmodels matplotlib openpy
 ```
 依序執行 notebook 即可。
 
-## 注意
-- ✅ 已將 notebook 內的本機絕對路徑改為**相對路徑**（`ML_Data2.xlsx`、`final_result.xlsx`），與資料同放本資料夾即可執行。
-- `testing.ipynb` 為因子模型零散試算，讀取 `Downloads/` 的外部資料（未隨附），非主線程式。
-- Notebook 內嵌大量圖片輸出、檔案較大（~11MB）；GitHub 可正常渲染這些結果圖，建議**保留**（清除輸出只會移除快取顯示、不影響程式碼）。
+## 說明
+- notebook 以相對路徑讀取 `ML_Data2.xlsx`、`final_result.xlsx`（與資料同放本資料夾即可執行）。
+- `testing.ipynb` 為因子模型試算，使用未隨附的外部資料，非主線。
 
 ## 資料取得（大檔未隨附）
 - `ML_Data2.xlsx`、`final_result.xlsx`：已隨附。
