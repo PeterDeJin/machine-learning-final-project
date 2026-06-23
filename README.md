@@ -2,32 +2,32 @@
 
 研究所「機器學習」課程的作業與期末專案：以機器學習方法做**股票報酬預測與投資組合建構**（empirical asset pricing）。
 
+## 結構
+```text
+機器學習.ipynb              作業 HW1–HW4（PCR、Sharpe、因子權重、邏輯迴歸）
+機器學習_期末報告.ipynb     期末專案（RidgeCV + XGBoost + SHAP 選股回測）
+機器學習_美股.ipynb         美股資料前處理（yfinance）
+data/                       輸入資料（ML_Data.xlsx、ML_Data2.xlsx、ETF 等權縫效）
+figures/                    產出圖檔（SHAP / PDP / permutation 重要度、投組績效，共 174 張）
+results/                    產出數據（投組與績效 CSV、final_result.xlsx、score_summary 等）
+docs/                       作業與報告（docx / pdf / pptx）
+```
+
 ## 內容
-### 程式（Notebooks）
-| 檔案 | 說明 |
+| Notebook | 說明 |
 |------|------|
 | `機器學習.ipynb` | 作業 HW1–HW4：資料處理、主成分迴歸 (PCR)、Sharpe ratio、因子權重估計、邏輯迴歸 |
 | `機器學習_期末報告.ipynb` | 期末專案：RidgeCV + XGBoost + SHAP，建構並回測選股投組 |
 | `機器學習_美股.ipynb` | 美股資料前處理：yfinance 下載 ~100 檔美股(2005–2015)＋合併基本面 |
 
-### 資料 / 產出
-- 資料：`ML_Data2.xlsx`、`final_result.xlsx`
-- 產出：`ridge_*` / `xgboost_*` / `rls_*` 等數十張特徵重要度（SHAP/PDP/permutation）與投組績效圖、CSV
-
-### 文件
-作業與報告書面檔：`機器學習HW3/HW4`、`機器學習 期末報告`（docx/pdf）、`機器學習Final Part1.pptx`
-
 ## 執行
 ```bash
 pip install pandas numpy scikit-learn xgboost shap statsmodels matplotlib openpyxl yfinance
 ```
-依序執行 notebook 即可。
-
-## 說明
-- notebook 以相對路徑讀取 `ML_Data2.xlsx`、`final_result.xlsx`（與資料同放本資料夾即可執行）。
-- `testing.ipynb` 為因子模型試算，使用未隨附的外部資料，非主線。
+- `機器學習.ipynb`／`機器學習_期末報告.ipynb`：讀 `data/ML_Data2.xlsx`，產出寫入 `results/`、`figures/`，可直接執行。
+- `機器學習_美股.ipynb`：需自備輸入（原以 Colab `/mnt/data/` 上傳），輸出 `results/SP100_data.xlsx`。
 
 ## 資料取得（大檔未隨附）
-- `ML_Data2.xlsx`、`final_result.xlsx`：已隨附。
-- `df_merged` / `df_merged.xlsx`（>200MB）：中間合併結果，**未隨附**；執行 notebook 的資料處理 cell 會由 `ML_Data2.xlsx` 重新產生。
+- `data/ML_Data2.xlsx`：已隨附；`results/final_result.xlsx` 由 notebook 產生。
+- `df_merged.xlsx`（>200MB）：中間合併結果，**未隨附**，由 `data/ML_Data2.xlsx` 重新產生。
 - 原始資料來源：TEJ。

@@ -5,3 +5,7 @@ __pycache__/
 *.bak
 df_merged
 df_merged.xlsx
+
+# scratch / 與專案無關，僅保留本地
+testing.ipynb
+xgboost_readmission_model.json
